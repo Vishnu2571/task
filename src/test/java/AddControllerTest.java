@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class AddControllerTest {
+class AddControllerTest {
     @Test
-    public void testAddNumbers() {
+    void testAddNumbers() {
         // Define the request payload
         String requestBody = "{\n" +
                 "  \"number1\": 30,\n" +
@@ -26,7 +26,7 @@ public class AddControllerTest {
     }
 
     @Test
-    public void testAddTwoNulls() {
+    void testAddTwoNulls() {
         String requestBody = "{\n" +
                 "  \"number1\": "+null+",\n" +
                 "  \"number2\": "+null+"\n" +
@@ -42,7 +42,7 @@ public class AddControllerTest {
                 .body(equalTo("The result is: "+0));
     }
     @Test
-    public void testInvalidBody() {
+     void testInvalidBody() {
 
 
         /*String requestBody = "{\n" +
